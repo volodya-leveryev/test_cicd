@@ -37,3 +37,4 @@ jobs:
         with:
           push: true
           tags: ${{ github.actor }}/students:latest
+          secrets: github_token=${{ secrets.GITHUB_TOKEN }}
