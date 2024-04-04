@@ -36,8 +36,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
-        id: meta
         uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
           tags: ghcr.io/${{ github.actor }}/students
